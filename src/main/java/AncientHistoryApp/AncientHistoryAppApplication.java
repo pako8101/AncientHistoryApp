@@ -9,5 +9,4 @@ public class AncientHistoryAppApplication {
     public static void main(String[] args) {
         SpringApplication.run(AncientHistoryAppApplication.class, args);
     }
-
 }

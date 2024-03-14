@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ancient History Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost" data-tag="font"/>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+</head>
+
+<body>
+<div>
+    <div class="home-container">
+        <div class="home-navbar">
+            <header th:fragment="nav" data-role="Header" class="home-header max-width-container">
+                <div class="home-navbar1">
+                    <th:block th:if="${@currentUser.id==null}">
+                        <div class="home-container01">
+                            <input type="text" placeholder="search" class="home-textinput input"/>
+                        </div>
+                        <div class="home-middle">
+                            <div class="home-left">
+                                <span class="navbar-link">HOME</span>
+                                <span class="navbar-link">LOGIN</span>
+                                <a class="navbar-link" href="/users/subscribe">SUBSCRIBE</a>
+                            </div>
+                        </div>
+
+                    </th:block>
+
+                    <th:block th:if="${@currentUser.id!=null}">
+                        <div class="home-container01">
+                            <input type="text" placeholder="search" class="home-textinput input"/>
+                        </div>
+                        <div class="home-middle">
+                            <div class="home-left">
+                                <span class="navbar-link">HOME</span>
+                                <span th:href="@{/users/profile/{id}(id=${@currentUser.id})}">PROFILE</span>
+                                <span class="navbar-link"><a href="/users/logout">LOGOUT</a></span>
+                                <span class="navbar-link"><a href="/articles/add">Add new Article</a></span>
+                                <span> <a href="/">ADMIN</a></span>
+                            </div>
+                        </div>
+
+                    </th:block>
+                    <span class="navbar-logo-title">
+                    <span class="navbar-logo-title">ANCIENT HISTORY PORTAL</span>
+                    <br/>
+                    <span style="font-size: x-small;margin-left: 3.5rem">LEARN ABOUT THE WORLD OF ANTIQUITY</span>
+                    </span>
+                    <div class="home-right">
+                        <span class="navbar-link">ABOUT</span>
+                        <span class="navbar-link">BLOG</span>
+                        <span class="navbar-link">CONTACT</span>
+                    </div>
+                </div>
+            </header>
+
+            <footer th:fragment="footer" class="home-footer1">
+                <div class="home-container09">
+                    <h3 class="home-text32 Heading-3">MOBILLIO</h3>
+                    <span class="home-text33">
+                <span>4517 Washington Ave. Manchester, Kentucky 39495,</span>
+                <br />
+                <span>United States</span>
+              </span>
+                    <span class="home-text36">(671) 555-0110</span>
+                    <span class="home-text37">contact@mobillio.com</span>
+                </div>
+                <div class="home-links-container">
+                    <div class="home-container10">
+                        <span class="home-text38">Categories</span>
+                        <a href="#" class="home-text39">Collections</a>
+                        <a href="#" class="home-text40">Desks</a>
+                        <a href="#" class="home-text41">Furniture</a>
+                        <a href="#" class="home-text42">Lamps</a>
+                        <a href="#" class="home-text43">Plants</a>
+                        <a href="#" class="home-text44">Decoration</a>
+                    </div>
+                    <div class="home-container11">
+                        <span class="home-text45">Company</span>
+                        <a href="#" class="home-text46">Shop</a>
+                        <a href="#" class="home-text47">Lookbook</a>
+                        <a href="#" class="home-text48">Specials</a>
+                        <a href="#" class="home-text49">About</a>
+                        <a href="#" class="home-text50">Blog</a>
+                    </div>
+                    <div class="home-container12">
+                        <span class="home-text51">Resources</span>
+                        <a href="#" class="home-text52">Contact us</a>
+                        <a href="#" class="home-text53">Order</a>
+                        <a href="#" class="home-text54">Track your order</a>
+                        <a href="#" class="home-text55">Shipping &amp; Delivery</a>
+                    </div>
+                </div>
+            </footer>
+
+</body>
+</html>

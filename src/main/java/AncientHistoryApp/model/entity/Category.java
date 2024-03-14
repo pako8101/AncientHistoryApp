@@ -15,7 +15,9 @@ public class Category extends BaseEntity {
 
     public Category() {
     }
-
+public Category(CategoryNameEnum name){
+        this.name = name;
+}
     public CategoryNameEnum getName() {
         return name;
     }

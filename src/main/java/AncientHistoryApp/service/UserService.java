@@ -1,5 +1,6 @@
 package AncientHistoryApp.service;
 
+import AncientHistoryApp.model.entity.User;
 import AncientHistoryApp.model.service.UserServiceModel;
 
 public interface UserService {
@@ -12,4 +13,6 @@ public interface UserService {
     UserServiceModel findByUsernameAndPassword(String username, String password);
 
     UserServiceModel findById(Long id);
+
+    User findCurrentUserLoginEntity();
 }

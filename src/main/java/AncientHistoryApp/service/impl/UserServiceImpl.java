@@ -33,7 +33,7 @@ currentUser.setUsername(username);
 
     @Override
     public UserServiceModel findByUsernameAndPassword(String username, String password) {
-        return userRepository.findByUsernameAndPassword(username,password)
+        return userRepository.findUserByUsernameAndPassword(username,password)
                 .map(user -> modelMapper.map(user,UserServiceModel.class))
                 .orElse(null);
     }

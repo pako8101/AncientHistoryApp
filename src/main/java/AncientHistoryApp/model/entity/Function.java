@@ -1,6 +1,6 @@
 package AncientHistoryApp.model.entity;
 
-import AncientHistoryApp.model.entity.enums.FunctionNameEnum;
+import AncientHistoryApp.model.entity.enums.FunctionEnum;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -11,16 +11,16 @@ import jakarta.persistence.Table;
 public class Function extends BaseEntity{
 
     @Enumerated(EnumType.STRING)
-    private FunctionNameEnum function;
+    private FunctionEnum function;
 
     public Function() {
     }
 
-    public FunctionNameEnum getFunction() {
+    public FunctionEnum getFunction() {
         return function;
     }
 
-    public void setFunction(FunctionNameEnum function) {
+    public void setFunction(FunctionEnum function) {
         this.function = function;
     }
 }

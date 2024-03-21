@@ -125,11 +125,13 @@ body {
   position: relative;
   align-items: center;
   justify-content: space-between;
+
 }
 .home-container01 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  word-spacing: -5px;
 }
 .home-image {
   width: 24px;

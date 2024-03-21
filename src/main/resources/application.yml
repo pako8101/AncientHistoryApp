@@ -26,11 +26,11 @@ spring:
   jpa:
     # Choose either MySQL 8 or MySQL 5 below
     # For MySQL 8
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     #For MySQL 5
     #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto:
     properties:
       hibernate:
         format_sql: true

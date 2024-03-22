@@ -1,7 +1,14 @@
 package AncientHistoryApp.model.binding;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 public class UserLoginBindingModel {
+    @Size(min = 3,max = 20)
+    @NotNull
     private String username;
+    @Size(min = 3,max = 20)
+    @NotNull
     private String password;
 
     public UserLoginBindingModel() {

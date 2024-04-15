@@ -1,5 +1,5 @@
 package AncientHistoryApp.model.entity.enums;
 
-public enum FunctionEnum {
+public enum ActionEnum {
     BEGINNER,MIDDLE,SENIOR
 }

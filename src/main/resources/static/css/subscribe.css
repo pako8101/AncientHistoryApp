@@ -7,9 +7,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 230vh;
     width: 200vh;
-    margin-top: 30rem;
+    margin-top: 100px;
     margin-left: 1px;
     margin-right: 1px;
 
@@ -21,6 +21,8 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
     width: 400px;
+
+
 }
 
 .main h2 {

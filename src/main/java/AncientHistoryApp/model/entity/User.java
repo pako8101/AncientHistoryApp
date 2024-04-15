@@ -1,7 +1,6 @@
 package AncientHistoryApp.model.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 
 import java.util.Set;
 
@@ -22,7 +21,7 @@ public class User extends BaseEntity{
     private Integer age;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    private Set<Function> functions;
+    private Set<Action> actions;
 
 
 
@@ -37,12 +36,12 @@ public class User extends BaseEntity{
         this.age = age;
     }
 
-    public Set<Function> getFunctions() {
-        return functions;
+    public Set<Action> getFunctions() {
+        return actions;
     }
 
-    public void setFunctions(Set<Function> functions) {
-        this.functions = functions;
+    public void setFunctions(Set<Action> actions) {
+        this.actions = actions;
     }
 
     public String getUsername() {

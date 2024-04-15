@@ -1,6 +1,6 @@
 package AncientHistoryApp.model.service;
 
-import AncientHistoryApp.model.entity.Function;
+import AncientHistoryApp.model.entity.Action;
 import AncientHistoryApp.model.entity.enums.PeriodEnum;
 
 import java.util.Set;
@@ -16,7 +16,7 @@ public class UserServiceModel {
 
     private Integer age;
 
-    private Set<Function> functions;
+    private Set<Action> actions;
 
     private PeriodEnum periods;
 
@@ -71,12 +71,12 @@ public class UserServiceModel {
         this.age = age;
     }
 
-    public Set<Function> getFunctions() {
-        return functions;
+    public Set<Action> getFunctions() {
+        return actions;
     }
 
-    public void setFunctions(Set<Function> functions) {
-        this.functions = functions;
+    public void setFunctions(Set<Action> actions) {
+        this.actions = actions;
     }
 
     public PeriodEnum getPeriods() {

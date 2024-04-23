@@ -131,7 +131,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  word-spacing: -5px;
+  word-spacing: -10px;
 }
 .home-image {
   width: 24px;

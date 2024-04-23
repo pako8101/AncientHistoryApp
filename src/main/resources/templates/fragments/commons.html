@@ -42,23 +42,24 @@
                         <div class="home-middle">
                             <div class="home-left">
                                 <a href="/" class="navbar-link">HOME</a>
-                                <span th:href="@{/users/profile/{id}(id=${@currentUser.id})}">PROFILE</span>
-                                <span class="navbar-link"><a href="/users/logout">LOGOUT</a></span>
-                                <span class="navbar-link"><a href="/articles/add">Add new Article</a></span>
-                                <span> <a href="/">ADMIN</a></span>
+                                <a class="navbar-link"   th:href="@{/users/profile/{id}(id=${@currentUser.id})}">PROFILE</a>
+                                <a class="navbar-link"  th:href="@{/users/logout}">LOGOUT</a>
+                                <a class="navbar-link"  th:href="@{/articles/add}">ADD NEW ARTICLE</a>
+<!--                                <span> <a href="/">ADMIN</a></span>-->
                             </div>
                         </div>
 
                     </th:block>
                     <span class="navbar-logo-title">
-                    <span class="navbar-logo-title">ANCIENT HISTORY PORTAL</span>
+                    <span style="font-weight: bold" class="navbar-logo-title">ANCIENT HISTORY PORTAL</span>
+
                     <br/>
                     <span style="font-size: x-small;margin-left: 3.5rem">LEARN ABOUT THE WORLD OF ANTIQUITY</span>
                     </span>
                     <div class="home-right">
-                        <a href="/about" class="navbar-link">ABOUT</a>
-                        <span class="navbar-link">BLOG</span>
-                        <span class="navbar-link">CONTACT</span>
+                        <a th:href="@{/about}" class="navbar-link">ABOUT</a>
+                        <a class="navbar-link">BLOG</a>
+                        <a class="navbar-link">CONTACT</a>
                     </div>
                 </div>
             </header>

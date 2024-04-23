@@ -9,10 +9,10 @@ import jakarta.validation.constraints.Size;
 import java.util.Set;
 
 public class ArticleAddBindingModel {
-    @Size(min = 3,max = 20, message = "Article name must be between 3 and 20 characters")
+    @Size(min = 3,max = 30, message = "Article title must be between 3 and 30 characters")
     @NotEmpty
     private String title;
-    @Size(min = 3)
+    @Size(min = 10,message = "Article content must be more then 10 characters!")
     private String content;
     @NotNull
     private PeriodEnum category;
